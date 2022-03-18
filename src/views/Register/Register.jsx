@@ -10,7 +10,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const location = useLocation();
 
-    const baseUrl = 'https://backend-clients-register.herokuapp.com/'
+    const baseUrl = 'https://backend-clients-register.herokuapp.com'
 
     async function registerUser(event) {
         event.preventDefault();
