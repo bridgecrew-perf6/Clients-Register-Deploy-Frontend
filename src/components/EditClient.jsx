@@ -41,7 +41,7 @@ const EditClient = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        axios.post(`/api/clients/update-client/${client.id}`, {
+        axios.post(`${baseUrl}/api/clients/update-client/${client.id}`, {
             name: name,
             documenType: typeDocument,
             document: document,
