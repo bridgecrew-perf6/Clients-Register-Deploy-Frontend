@@ -14,11 +14,9 @@ const ListClients = () => {
     const [showAlert, setShowAlert] = useState(false);
     const [color, setColor] = useState(true);
 
-    const baseUrl = 'https://backend-clients-register.herokuapp.com'
-
     useEffect(() => {
         axios({
-            url: `${baseUrl}/api/clients/all-clients/${id_user}`
+            url: `/api/clients/all-clients/${id_user}`
         })
             .then(response => {
                 setClients(response.data)
@@ -32,7 +30,7 @@ const ListClients = () => {
     const removeClient = (id) => {
         axios({
             method: "delete",
-            url: `${baseUrl}/api/clients/delete-client/${id}`
+            url: `/api/clients/delete-client/${id}`
         })
             .then(response => {
                 setShowAlert(true)

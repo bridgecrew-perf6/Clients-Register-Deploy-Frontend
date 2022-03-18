@@ -8,11 +8,9 @@ const Modal = () => {
   const { id } = useParams();
   const [client, setClient] = useState([])
 
-  const baseUrl = 'https://backend-clients-register.herokuapp.com'
-
   useEffect(() => {
     axios({
-      url: `${baseUrl}/api/clients/one/${id}`
+      url: `/api/clients/one/${id}`
     })
       .then(response => {
         setClient(response.data)

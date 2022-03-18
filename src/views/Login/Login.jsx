@@ -13,11 +13,11 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const baseUrl = 'https://backend-clients-register.herokuapp.com'
+    // const baseUrl = 'http://localhost:3001'
 
     async function loginUser(event) {
         event.preventDefault();
-        const response = await fetch(`${baseUrl}/api/login`, {
+        const response = await fetch(`/api/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

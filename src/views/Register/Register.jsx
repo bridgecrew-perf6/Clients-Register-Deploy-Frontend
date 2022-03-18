@@ -10,11 +10,11 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const location = useLocation();
 
-    const baseUrl = 'https://backend-clients-register.herokuapp.com'
+    // const baseUrl = 'http://localhost:3001'
 
     async function registerUser(event) {
         event.preventDefault();
-        const response = await fetch(`${baseUrl}/api/register`, {
+        const response = await fetch(`/api/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
