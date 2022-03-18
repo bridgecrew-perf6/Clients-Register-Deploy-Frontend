@@ -19,7 +19,7 @@ const EditClient = () => {
     const [providers, setProviders] = useState(client.providers);
     const [sales, setSales] = useState(client.sales);
 
-    const baseUrl = 'https://backend-clients-register.herokuapp.com/'
+    const baseUrl = 'https://backend-clients-register.herokuapp.com'
 
     useEffect(() => {
         axios({
