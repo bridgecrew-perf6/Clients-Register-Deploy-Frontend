@@ -14,7 +14,7 @@ const ListClients = () => {
     const [showAlert, setShowAlert] = useState(false);
     const [color, setColor] = useState(true);
 
-    const baseUrl = 'https://backend-clients-register.herokuapp.com/'
+    const baseUrl = 'https://backend-clients-register.herokuapp.com'
 
     useEffect(() => {
         axios({
