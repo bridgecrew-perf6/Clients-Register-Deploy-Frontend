@@ -19,7 +19,7 @@ const AddClient = () => {
     const [providers, setProviders] = useState('');
     const [sales, setSales] = useState('');
 
-    const baseUrl = 'https://backend-clients-register.herokuapp.com/'
+    const baseUrl = 'https://backend-clients-register.herokuapp.com'
 
     const onSubmit = (e) => {
         e.preventDefault();
