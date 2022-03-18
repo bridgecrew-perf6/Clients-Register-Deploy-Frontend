@@ -13,7 +13,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const baseUrl = 'https://backend-clients-register.herokuapp.com/'
+    const baseUrl = 'https://backend-clients-register.herokuapp.com'
 
     async function loginUser(event) {
         event.preventDefault();
