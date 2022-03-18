@@ -10,11 +10,11 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const location = useLocation();
 
-    // const baseUrl = 'http://localhost:3001'
+    const baseUrl = 'https://backend-clients-register.herokuapp.com/'
 
     async function registerUser(event) {
         event.preventDefault();
-        const response = await fetch(`/api/register`, {
+        const response = await fetch(`${baseUrl}/api/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -38,7 +38,6 @@ const Register = () => {
         <div className='Login'>
             <div className='Card_Login'>
                 <img src={Img} alt="img Finaktiva" ></img>
-                {/* <h1>Registrarse</h1> */}
                 <form onSubmit={registerUser}>
                     <input
                         className="inputLogin"
@@ -68,8 +67,6 @@ const Register = () => {
                     />
                     <br />
                     <button className="btn" onClick={registerUser}>Registrar</button>
-
-
                 </form>
             </div>
         </div>

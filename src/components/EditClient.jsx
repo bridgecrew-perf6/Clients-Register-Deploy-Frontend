@@ -19,9 +19,11 @@ const EditClient = () => {
     const [providers, setProviders] = useState(client.providers);
     const [sales, setSales] = useState(client.sales);
 
+    const baseUrl = 'https://backend-clients-register.herokuapp.com/'
+
     useEffect(() => {
         axios({
-            url: `/api/clients/one/${id}`
+            url: `${baseUrl}/api/clients/one/${id}`
         })
             .then(response => {
                 setClient(response.data)
@@ -39,7 +41,7 @@ const EditClient = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        axios.post(`/api/clients/update-client/${client.id}`, {
+        axios.post(`${baseUrl}/api/clients/update-client/${client.id}`, {
             name: name,
             documenType: typeDocument,
             document: document,

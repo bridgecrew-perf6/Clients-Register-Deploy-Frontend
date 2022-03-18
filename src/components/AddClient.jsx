@@ -19,9 +19,11 @@ const AddClient = () => {
     const [providers, setProviders] = useState('');
     const [sales, setSales] = useState('');
 
+    const baseUrl = 'https://backend-clients-register.herokuapp.com/'
+
     const onSubmit = (e) => {
         e.preventDefault();
-        axios.post('/api/clients/create-client', {
+        axios.post(`${baseUrl}/api/clients/create-client`, {
             name: name,
             documenType: typeDocument,
             document: document,
